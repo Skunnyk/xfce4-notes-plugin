@@ -826,7 +826,7 @@ namespace Xnp {
 		 * within the window menu.
 		 */
 		public void set_window_list (SList<Xnp.Window> list) {
-			this.window_list = list;
+			//this.window_list = list;
 		}
 
 		/**
@@ -1047,7 +1047,7 @@ namespace Xnp {
 			int res = dialog.run ();
 			dialog.hide ();
 			if (res == Gtk.ResponseType.OK) {
-				weak string name = entry.text;
+				string name = entry.text;
 				if (note_name_exists (name)) {
 					var error_dialog = new Gtk.MessageDialog (this, Gtk.DialogFlags.DESTROY_WITH_PARENT,
 						Gtk.MessageType.ERROR, Gtk.ButtonsType.CLOSE, _("The name %s is already in use"), name);
